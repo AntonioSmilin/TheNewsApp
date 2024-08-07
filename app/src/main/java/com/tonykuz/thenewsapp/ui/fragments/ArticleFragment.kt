@@ -8,6 +8,7 @@ import androidx.navigation.fragment.navArgs
 import com.google.android.material.snackbar.Snackbar
 import com.tonykuz.thenewsapp.R
 import com.tonykuz.thenewsapp.databinding.FragmentArticleBinding
+import com.tonykuz.thenewsapp.notifications.NotificationHelper
 import com.tonykuz.thenewsapp.ui.NewsActivity
 import com.tonykuz.thenewsapp.ui.NewsViewModel
 
@@ -35,6 +36,10 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
         binding.fab.setOnClickListener {
             newsViewModel.addToFavourites(article)
             Snackbar.make(view, "Добавлено в избранное", Snackbar.LENGTH_SHORT).show()
+        }
+
+        binding.fab2.setOnClickListener {
+            NotificationHelper.notificationSet(requireContext(), article)
         }
     }
 }
