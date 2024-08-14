@@ -42,4 +42,13 @@
             app:destination="@id/articleFragment" />
     </fragment>
 
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.tonykuz.thenewsapp.ui.fragments.SettingsFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
+
 </navigation>
